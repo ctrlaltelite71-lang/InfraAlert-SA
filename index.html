@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InfraAlert SA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet Map -->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<header>
+    <h1>🚨 InfraAlert SA</h1>
+    <p>Smart Municipal Infrastructure System</p>
+</header>
+
+<!-- NOTIFICATIONS -->
+
+<div id="notificationBar" class="notification-bar">
+    Welcome to InfraAlert SA
+</div>
+
+<!-- HOME -->
+
+<section id="homeScreen" class="screen active">
+
+```
+<h2 id="welcomeText">Welcome</h2>
+
+<label>🌍 Language</label>
+<select id="languageSelect" onchange="changeLanguage()">
+    <option>English</option>
+    <option>isiZulu</option>
+    <option>isiXhosa</option>
+    <option>Afrikaans</option>
+    <option>Sesotho</option>
+    <option>Setswana</option>
+    <option>Sepedi</option>
+    <option>Xitsonga</option>
+    <option>Tshivenda</option>
+    <option>siswati</option>
+    <option>isiNdebele</option>
+</select>
+
+<div class="menu-grid">
+
+    <button id="reportBtn" onclick="showScreen('reportScreen')">📢 Report</button>
+    <button id="trackBtn" onclick="showScreen('trackScreen')">📍 Track</button>
+    <button id="alertsBtn" onclick="showScreen('alertsScreen')">🚨 Alerts</button>
+    <button id="dashboardBtn" onclick="showScreen('dashboardScreen')">🏛️ Dashboard</button>
+
+</div>
+```
+
+</section>
+
+<!-- REPORT -->
+
+<section id="reportScreen" class="screen">
+
+<button onclick="showScreen('homeScreen')">
+⬅ Home
+</button>
+```
+<h2 id="reportTitle">📢 Report Issue</h2>
+
+<input id="fullname" placeholder="Full Name">
+<input id="location" placeholder="Location">
+
+<select id="issueType">
+    <option>Water Leak</option>
+    <option>Streetlight Fault</option>
+    <option>Sewage Overflow</option>
+    <option>Illegal Dumping</option>
+    <option>Traffic Light Fault</option>
+</select>
+
+<textarea id="description" placeholder="Describe issue"></textarea>
+<input
+    type="file"
+    id="issuePhoto"
+    accept="image/*">
+
+<button id="detectLocationBtn" onclick="getLocation()">📍 Detect Location</button>
+<p id="locationDisplay"></p>
+
+<div id="map" style="height:200px"></div>
+
+<button id="voiceBtn" onclick="startVoiceReport()">🎤 Voice</button>
+<button id="submitBtn" onclick="submitReport()">Submit Report</button>
+
+<div id="reportResult"></div>
+```
+
+</section>
+
+<!-- TRACK -->
+
+<section id="trackScreen" class="screen">
+
+<button onclick="showScreen('homeScreen')">
+⬅ Home
+</button>
+
+```
+<h2 id="trackTitle">📍 Track Report</h2>
+
+<input id="trackingNumber" placeholder="Enter Reference">
+<button id="trackSearchBtn" onclick="trackReport()">Track</button>
+
+<div id="trackingStatus"></div>
+```
+
+</section>
+
+<!-- ALERTS -->
+
+<section id="alertsScreen" class="screen">
+
+<button onclick="showScreen('homeScreen')">
+⬅ Home
+</button>
+
+```
+<h2 id="alertsTitle">🚨 Community Alerts</h2>
+
+<div class="alert-card">Water leak reported nearby</div>
+<div class="alert-card">Streetlight outage zone B</div>
+<div class="alert-card">Sewage overflow warning</div>
+```
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboardScreen" class="screen">
+
+<button onclick="showScreen('homeScreen')">
+⬅ Home
+</button>
+
+```
+<h2 id="dashboardTitle">🏛️ Municipal Dashboard</h2>
+
+<button  id="refreshBtn" onclick="loadDashboard()">Refresh</button>
+
+<div id="dashboardData"></div>
+```
+
+</section>
+
+<script src="script.js"></script>
+
+</div>
+
+</body>
+</html>
+
