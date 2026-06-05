@@ -1,0 +1,146 @@
+/* ==========================
+INFRAALERT SA - GRAND PRIZE STYLE
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+background: #eef3f8;
+color: #1f2d3d;
+}
+
+/* APP CONTAINER */
+.app-container {
+max-width: 900px;
+margin: auto;
+padding-bottom: 80px;
+}
+
+/* HEADER */
+header {
+background: linear-gradient(135deg, #0057b8, #003f88);
+color: white;
+text-align: center;
+padding: 18px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+font-size: 28px;
+}
+
+header p {
+font-size: 13px;
+opacity: 0.9;
+}
+
+/* NOTIFICATION BAR */
+.notification-bar {
+background: #fff3cd;
+color: #856404;
+padding: 10px;
+text-align: center;
+font-weight: bold;
+}
+
+/* SCREENS */
+.screen {
+display: none;
+padding: 18px;
+}
+
+.screen.active {
+display: block;
+}
+
+/* INPUTS */
+input, textarea, select {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+margin-bottom: 12px;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 15px;
+}
+
+/* BUTTONS */
+button {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+border: none;
+border-radius: 10px;
+background: #0057b8;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+background: #003f88;
+}
+
+/* MENU GRID */
+.menu-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-top: 15px;
+}
+
+.menu-grid button {
+height: 90px;
+font-size: 16px;
+}
+
+/* ALERT CARDS */
+.alert-card {
+background: white;
+padding: 12px;
+margin-top: 10px;
+border-left: 5px solid #ff4d4d;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* DASHBOARD */
+#dashboardData .alert-card {
+border-left: 5px solid #0057b8;
+}
+
+/* TRACK BOX */
+#trackingStatus {
+margin-top: 15px;
+padding: 12px;
+background: white;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* MAP */
+#map {
+margin-top: 10px;
+border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+```
+.menu-grid {
+    grid-template-columns: 1fr;
+}
+
+header h1 {
+    font-size: 22px;
+}
+```
+
+}
